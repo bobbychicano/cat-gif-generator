@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-size: 16px;
+  font-family: 'Helvetica', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* A modern solution to setting the height of a page */
+  min-height: 100vh;
+  /* Leave out a specific width to avoid surprise horizontal scroll bars */
+  min-width: 275px;
+  width: 100%;
+  /* overflow: auto; */
+}
+
+img {
+  padding-bottom: 1rem;
+  /* max-height: calc(100vh - 40%); */
+  max-width: 100%;
+}
+
+.cat-button {
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  display: inline-flex;
+  min-height: 44px;
+  text-align: center;
+  background-color: #D25A9E;
+  color: #fff;
+  transition: background-color 250ms;
+}
+
+.cat-button:hover {
+  background-color: #764B93;
+}
+
+.cat-button:active {
+  background-color: #764B93;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+#search-bar {
+  padding: 10px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+#search-bar:invalid {
+  border-color: red;
+}
+
+#search-button {
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.15rem;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  background-color: #EC8278;
+  color: #fff;
+  transition: background-color 250ms;
+}
+
+#search-button:hover {
+  background-color: #CF7269;
+}
+
+#search-button:active {
+  background-color: #CF7269;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#remaining-chars {
+  color: #5E5E5B;
+  font-weight: lighter;
+  text-align: right;
+  align-self: flex-end;
+  font-size: 0.9rem;
+  padding-right: 0.3rem;
+}
