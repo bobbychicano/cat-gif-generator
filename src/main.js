@@ -4,6 +4,8 @@ const image = document.querySelector('img');
 const randomCat = document.querySelector('.cat-button');
 const searchBar = document.getElementById('search-bar');
 const searchButton = document.getElementById('search-button');
+const remainingChars = document.getElementById('remaining-chars');
+const MAX_CHARS = 25;
 
 //Replace with pointer events once application is complete
 //'Click' and 'touch' event listeners for new cat gif button
@@ -15,6 +17,8 @@ searchButton.addEventListener('click', newSearch);
 searchButton.addEventListener('touchend', newSearch);
 
 //I also need to implement 'enter' key functinality
+
+searchBar.addEventListener('input', countCharacters);
 
 //Function using async/await keywords
 async function getGif() {
@@ -49,3 +53,8 @@ async function newSearch() {
 }
 
 // Let's implement a small character counter under the input field
+function countCharacters() {
+  const remaining = MAX_CHARS - searchBar.value.length;
+
+  remainingChars.textContent = remaining + ' characters remaining';
+}
