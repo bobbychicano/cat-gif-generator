@@ -22,6 +22,8 @@ body {
   min-width: 275px;
   width: 100%;
   /* overflow: auto; */
+  background-image: radial-gradient(black 0.5px, transparent 0.5px);
+	background-size: 10px 10px;
 }
 
 img {
