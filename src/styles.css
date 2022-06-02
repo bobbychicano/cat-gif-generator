@@ -28,7 +28,7 @@ body {
 
 img {
   padding-bottom: 1rem;
-  /* max-height: calc(100vh - 40%); */
+  max-height: calc(100vh - 40%);
   max-width: 100%;
 }
 
